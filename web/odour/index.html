@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC>
+
+<html ng-app="odourCollectApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Odour Collect</title>
+    <meta name="description" content="Odour Collect Project">
+
+    <!--<base href="/">-->
+
+    <!-- Style sheets -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/angular-bootstrap-datetimepicker/css/datetimepicker.css">
+    <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+    <link rel="stylesheet" href="assets/vendor/leaflet-markercluster/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="assets/vendor/leaflet-locatecontrol/L.Control.Locate.min.css" />-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Javascript libraries -->
+    <script src="assets/vendor/jquery-2.2.4.min.js"></script>
+    <script src="assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/moment.js"></script>
+    <script src="assets/vendor/leaflet/leaflet.js"></script>
+    <script src="assets/vendor/leaflet-markercluster/leaflet.markercluster.js"></script>
+    <!--<script src="assets/vendor/leaflet-locatecontrol/L.Control.Locate.min.js"></script>-->
+    <script src="assets/vendor/angular.min.js"></script>
+    <script src="assets/vendor/angular-route.min.js"></script>
+    <script src="assets/vendor/angular-gettext.min.js"></script>
+    <script src="assets/vendor/angular-simple-logger.min.js"></script>
+    <script src="assets/vendor/angular-local-storage.min.js"></script>
+    <script src="assets/vendor/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="assets/vendor/ui-leaflet/ui-leaflet.fix.js"></script>
+    <script src="assets/vendor/ui-slider/ui-slider.js"></script>
+    <script src="assets/vendor/angular-bootstrap-datetimepicker/js/datetimepicker.js"></script>
+    <script src="assets/vendor/angular-bootstrap-datetimepicker/js/datetimepicker.templates.js"></script>
+    <script src="assets/vendor/angular-utils-pagination.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/controllers.js"></script>
+    <script src="assets/js/services.js"></script>
+    <script src="assets/js/directives.js"></script>
+    <script src="assets/js/translations.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#!/">
+        Aqua Ibercivis</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-menu-collapse" ng-controller="NavCtrl">
+        <ul class="nav navbar-nav">
+          <li ng-class="{ active: isActive('/')}">
+            <a href="#!/" translate>Map</a>
+          </li>
+          <li ng-class="{ active: isActive('/lastentries')}">
+            <a href="#!lastentries" translate>Last entries</a>
+          </li>
+          <li ng-class="{ active: isActive('/project')}">
+            <a href="#!project" translate>The Project</a>
+          </li>
+          <li ng-class="{ active: isActive('/methodology')}">
+            <a href="#!methodology" translate>Methodology</a>
+          </li>
+   	  <li ng-class="{ active: isActive('/termsofuse')}">
+            <a href="#!termsofuse" translate>Terms of use</a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-divider"></li>
+          <li ng-hide="loggedUser">
+            <a href="" ng-click="openLogin()" translate>Log in</a>
+          </li>
+          <li ng-show="loggedUser">
+            <a href="#!user/{{ loggedUser.id }}">{{ 'Welcome' | translate }} {{ loggedUser.name }}</a>
+          </li>
+          <li ng-show="loggedUser">
+            <a href="" ng-click="logout()" translate>Sign out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="content">
+      <!-- Content -->
+      <div ng-view></div>
+    </div>
+
+    <!-- Footer -->
+    <!--footer>
+      <ul class="list-inline quicklinks">
+        <li>
+          <a href="http://www.ibercivis.es/">
+            <img alt="Ibercivis Logo" id="ibercivis_logo_img" src="assets/img/ibercivislogo.png">
+          </a>
+        </li>
+        <li>
+          <a href="http://digitalearthlab.jrc.ec.europa.eu/about-geoss/57832">
+            <img alt="MYGEOSS Logo" id="mygeoss_logo_img" src="assets/img/mygeosslogo.jpg">
+          </a>
+        </li>
+        <li>
+          <a href="http://ec.europa.eu/index_en.htm">
+            <img alt="EC Logo" id="ec_logo_img" src="assets/img/european.png">
+          </a>
+        </li>
+      </ul>
+    </footer-->
+  </body>
+</html>
+

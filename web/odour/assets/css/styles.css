@@ -1,0 +1,286 @@
+/* Global Styles */
+body{
+  background: #3f4b5d;
+  color:  #dedede;
+  font-size: 16px;
+}
+.navbar {background-color: #313131;}
+.navbar {border: 0px;}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {color: #f1f1f1;}
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {color: #f1f1f1; background-color: #d3d3d1;}
+
+@media only screen and (max-width: 766px) {
+.collapsing, .in {background-color: #f7f7f7;}
+.collapsing ul li a, .in ul li a {color: #555!important;}
+.collapsing ul li a:hover, .in ul li a:hover {color: #f1f1f1!important;}
+}
+
+.navbar-right {
+  margin-right: 20px !important;
+}
+.navbar-brand{
+  background: #178bdf;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#content {
+  margin-top: 51px;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  height: 20px;
+}
+
+footer ul.quicklinks {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  text-transform: none;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 40px;
+}
+
+footer ul.quicklinks li {
+  margin-right: 15px;
+}
+
+footer ul.quicklinks img {
+  max-height: 20px;
+}
+
+/* Content */
+
+#content h3 {
+  margin-top: 20px;
+  margin-bottom: 1em;
+  background-color: #178bdf;
+  padding: 5px;
+  border-radius: 3px;
+}
+#content h3.interior {
+  margin-top: 0px;
+  margin-bottom: 1em;
+  background-color: #178bdf;
+  padding: 5px;
+  border-radius: 3px 3px 0px 0px;
+}
+
+
+
+#content p {
+  text-align: justify;
+}
+
+#content p,
+#content li {
+  margin-bottom: 1.2em;
+}
+
+#content li > ul > li {
+  margin-bottom: 0;
+}
+
+#content li > ul {
+  margin-top: 0.5em;
+}
+
+/* Map */
+
+#map-wrapper {
+  height: 90%;
+  position: relative;
+}
+
+.leaflet-control-layers {
+  display: none;
+}
+
+.leaflet-bar-part-single {
+  padding-top: 5px;
+}
+
+#map-extra {
+  margin: 15px;
+}
+
+#form-filter {
+  margin-top: 15px;
+}
+
+.btn-comment {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Modals */
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 350px;
+  }
+}
+
+.modal-content {
+  border-radius: 3px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: #2b323e;
+  color: #ddd;
+  padding: 0px;
+}
+
+.modal-header {
+  background: #6c778c;
+  color: #ddd;
+  padding: .4em 1em;
+  border-radius: 3px 3px 0px 0px;
+  position: relative;
+  border: 0px;
+}
+
+.modal-header .modal-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-header .modal-header-close {
+  position: absolute;
+  right: .0em;
+  top: 0%;
+  width: 40px;
+  margin: -15px -15px 0 0;
+  height: 40px;
+
+  border-radius: 40px;
+
+  border: 0px solid #c5c5c5;
+  background: #f63333;
+
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1em;
+
+  box-sizing: border-box;
+  white-space: nowrap;
+
+  vertical-align: middle;
+  text-align: center;
+}
+
+.modal-footer {
+  margin-top: .10em;
+  padding: .5em 1em .5em .4em;
+}
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+    max-width: 1400px;
+  }
+}
+
+/* Forms */
+
+.ui-slider {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+label.sublabel {
+  font-weight: normal;
+}
+
+.form-value {
+  margin-left: 10px;
+}
+
+/* Reports */
+
+.report {
+  background-color: #1f242c; 
+  border-radius: 3px;
+  color: #6c778c;
+}
+.reportdate{
+  background-color: #000;
+}
+
+.pagination-wrapper {
+  margin-top: 25px;
+}
+
+.report-link,
+.leaflet-container .report-link {
+  color: inherit;
+}
+
+.report-link:hover,
+.report-link:active,
+.leaflet-container .report-link:hover,
+.leaflet-container .report-link:active {
+  text-decoration: none;
+}
+
+.comment {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+#content .comment p {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.center{
+  border-radius: 3px 3px 0px 0px;
+  padding: 0px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #2b323e;
+}
+.center2{
+  text-align: center;
+  font-size: 16px;
+}
+.parrafo{
+  border-radius: 3px 3px 0px 0px;
+  background-color: #2b323e;
+}
+.parrafo > .interior{
+  padding: 5px;
+}
+
+/* CSS general */
+.mi-iframe {
+  width: 100px;
+  height: 50px;
+}
+
+/* CSS pantallas de 320px o superior */
+@media (min-width: 320px) {
+
+  .mi-iframe {
+    width: 320px;
+    height: 180px;
+  } 
+
+}
+
+/* CSS pantalla 768px o superior */
+@media (min-width: 768px) {
+
+  .mi-iframe {
+    width: 640px;
+    height: 360px;
+  } 
+
+}
+
+

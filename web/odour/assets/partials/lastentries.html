@@ -1,0 +1,54 @@
+<div class="container">
+
+  <h3 translate>Last entries</h3>
+
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="nearbyfilter" translate>Show</label>
+      <label class="radio-inline">
+        <input type="radio" name="nearbyfilter" id="nearbyfilter_all" value="all" ng-model="nearbyfilter" ng-change="refresh()"> {{ 'All' | translate }}
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="nearbyfilter" id="nearbyfilter_nearby" value="nearby" ng-model="nearbyfilter" ng-change="refresh()"> {{ 'Nearby' | translate }}
+      </label>
+    </div>
+  </form>
+
+  <div class="row">
+    <div class="col-xs-6 col-md-4" dir-paginate="report in reports | itemsPerPage:10">
+      <div class="report">
+      	<a href="#!entry/{{ report.report_id }}" class="report-link">
+        <div class="center">
+		<br><br>
+		<b>{{ report.report_date }}</b>
+		<br/>
+		<br/>
+		<br/>
+	</div>
+        <div class="center2">
+                <br>
+                <br>
+		<strong translate>User </strong>: <strong>{{ report.username }}</strong><br>
+		<strong translate>pH</strong>: {{report.ph }}<br>
+		<strong translate>cl</strong>: {{report.cl }}<br >
+		<strong translate>Type</strong>: {{ report.type }}<br>
+		<strong translate>Intensity (1 - 6)</strong>: {{ report.intensity }}<br>
+		<strong translate>Annoyance (-4 - 4)</strong>: {{ report.annoyance }}<br>
+		<strong translate>Number of comments</strong>: {{ report.number_comments }}<br>
+                <br>
+                <br>
+	</div>
+      	</a>
+      </div>
+      <br />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 pagination-wrapper">
+      <nav class="text-center">
+        <dir-pagination-controls max-size="8"></dir-pagination-controls>
+      </nav>
+    </div>
+  </div>
+</div>
